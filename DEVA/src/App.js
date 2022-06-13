@@ -1,4 +1,5 @@
 import "./App.css";
+import PollCreate from "./components/PollCreate";
 function App() {
 	return (
 		<>
@@ -18,6 +19,7 @@ function App() {
 				<div className="container poll-list">List</div>
 				<div className="container poll-detail">Detail</div>
 			</div>
+			<PollCreate />
 		</>
 	);
 }
