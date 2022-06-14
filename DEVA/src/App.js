@@ -1,5 +1,6 @@
 import "./App.css";
 import PollCreate from "./components/PollCreate";
+let showForm = false;
 function App() {
 	return (
 		<>
@@ -7,7 +8,11 @@ function App() {
 				<a href="/" className="navbar-brand mr-auto">
 					BlockChain Polls
 				</a>
-				<button type="button" className="btn btn-secondary">
+				<button
+					type="button"
+					className="btn btn-secondary"
+					onClick={(showForm = !showForm)}
+				>
 					Create Poll
 				</button>
 			</nav>
@@ -19,7 +24,9 @@ function App() {
 				<div className="container poll-list">List</div>
 				<div className="container poll-detail">Detail</div>
 			</div>
-			<PollCreate />
+			<div className="showPoll" ngIf={showForm}>
+				<PollCreate />
+			</div>
 		</>
 	);
 }
